@@ -44,13 +44,13 @@ class PostchiBackendTestCase(TestCase):
             # Assert
             self.assertEqual(instance.async, False)  # postchi send_type is sync by default
 
-    @mock.patch("poseidon_async.get_runner")
+    @mock.patch("easy_job.get_runner")
     def test_backend_init_method_async_mode(self, get_runner):
         from postchi.backend import PostchiEmailBackend
         # Arrange
         configs = {
             'send_type': 'async',
-            'poseidon_worker_name': 'postchi',
+            'easy_job_worker_name': 'postchi',
             'logger': 'mail_log'
         }
         with self.settings(POSTCHI=configs):
@@ -62,7 +62,7 @@ class PostchiBackendTestCase(TestCase):
             self.assertEqual(instance.logger_name, 'mail_log')
             get_runner.assert_called_once_with("postchi")
 
-    @mock.patch("poseidon_async.get_runner")
+    @mock.patch("easy_job.get_runner")
     def test_backend_init_method_async_mode_without_worker_name(self, get_runner):
         from postchi.backend import PostchiEmailBackend
         # Arrange
