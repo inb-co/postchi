@@ -10,7 +10,7 @@ Postchi is a Python package which provides better mailing infrastructures, helpi
  2. specify postchi as your email backend
 
 ```
-#settings.py
+# settings.py
 EMAIL_BACKEND = "postchi.backend.PostchiEmailBackend"
 ```
 
