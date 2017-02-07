@@ -26,11 +26,10 @@ setup(
                       "easy-job"],
     tests_require=['django-setuptest'],
     test_suite='setuptest.setuptest.SetupTestSuite',
-	#packages=find_packages(),
     py_modules=['tests.tests'],
     author_email='mahdi.elf@gmail.com',
     url='https://github.com/inb-co/postchi',
-    keywords=['worker', 'task runner', 'lightweight job runner'],
+    keywords=['postchi', 'async email sender', 'django email backend'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Topic :: Utilities",
