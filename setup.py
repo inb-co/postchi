@@ -22,7 +22,7 @@ setup(
     version='0.1.0',
     description='A reliable async email sender for django',
     author='Mahdi Zareie',
-    install_requires=["django==1.9.12",
+    install_requires=["django>=1.9.0",
                       "easy-job"],
     tests_require=['django-setuptest'],
     test_suite='setuptest.setuptest.SetupTestSuite',
