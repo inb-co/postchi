@@ -19,11 +19,10 @@ class PyTest(TestCommand):
 setup(
     name='postchi',
     packages=setuptools.find_packages(exclude=['tests', 'tests.*']),
-    version='0.1.0',
+    version='0.1.2',
     description='A reliable async email sender for django',
     author='Mahdi Zareie',
-    install_requires=["django>=1.9.0",
-                      "easy-job"],
+    install_requires=["easy-job"],
     tests_require=['django-setuptest'],
     test_suite='setuptest.setuptest.SetupTestSuite',
     py_modules=['tests.tests'],
