@@ -12,7 +12,7 @@ def _send_message(to, subject, body, logger_name, **params):
     from django.core.mail.backends.smtp import EmailBackend
     from django.core.mail import EmailMessage
     try:
-        if type(to) not in ('list', 'tuple'):
+        if type(to) not in (list, tuple):
             to = (to, )
         email = EmailMessage(to=to, body=body, subject=subject)
         email.content_subtype = "html"
